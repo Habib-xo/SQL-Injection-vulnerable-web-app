@@ -12,7 +12,7 @@ if (($_SERVER['REQUEST_METHOD']  === 'POST') && (isset($email) && isset($passwor
         while ($row = $result->fetch_assoc()) {
             session_start();
             $_SESSION['email'] = $email;
-            header("Location: store.php");
+            header("Location: check.php");
             exit;
         }
     } else {
@@ -30,6 +30,7 @@ if (($_SERVER['REQUEST_METHOD']  === 'POST') && (isset($email) && isset($passwor
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <center><h1>Welcome to my Store</h1> <br> <hr>
